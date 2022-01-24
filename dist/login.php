@@ -51,20 +51,20 @@
       <header class="card-header">
         <p class="card-header-title">
           <span class="icon"><i class="mdi mdi-lock"></i></span>
-          Login
+          Login administrasi pengelolaan Laundry
         </p>
       </header>
       <div class="card-content">
-        <form method="get">
+        <form action="proses_login.php" method="post">
 
           <div class="field spaced">
             <label class="label">Login</label>
             <div class="control icons-left">
-              <input class="input" type="text" name="login" placeholder="user@example.com" autocomplete="username">
+              <input class="input" type="text" name="username" placeholder="Username" autocomplete="username">
               <span class="icon is-small left"><i class="mdi mdi-account"></i></span>
             </div>
             <p class="help">
-              Please enter your login
+              Masukkan username 
             </p>
           </div>
 
@@ -75,7 +75,7 @@
               <span class="icon is-small left"><i class="mdi mdi-asterisk"></i></span>
             </p>
             <p class="help">
-              Please enter your password
+              Masukkan password
             </p>
           </div>
 
@@ -83,7 +83,7 @@
             <div class="control">
               <label class="checkbox"><input type="checkbox" name="remember" value="1" checked>
                 <span class="check"></span>
-                <span class="control-label">Remember</span>
+                <span class="control-label">Ingat saya</span>
               </label>
             </div>
           </div>
@@ -93,7 +93,7 @@
           <div class="field grouped">
             <div class="control">
               <button type="submit" class="button blue">
-                Login
+                Login 
               </button>
             </div>
             <div class="control">
