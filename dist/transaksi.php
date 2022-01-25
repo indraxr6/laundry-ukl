@@ -10,7 +10,7 @@ include 'ref.php';
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Outlet</li>
+      <li>Transaksi</li>
       
     </ul>
    
@@ -20,9 +20,9 @@ include 'ref.php';
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Tabel Outlet Laundry
+      Tabel Transaksi Laundry
     </h1>
-    <a href="add_outlet.php" class="button light">Tambah</a>
+    <a href="add_transaksi.php" class="button light">Tambah</a>
   </div>
 </section>
 
@@ -46,9 +46,14 @@ include 'ref.php';
             <!-- //TABLE HEAD -->
             <th class="image-cell"></th>  
             
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>No. Telpon</th>
+            <th>Nama Member</th>
+            <th>Tanggal</th>
+            <!-- <th>Batas Waktu</th> -->
+            <th>Tanggal Dibayar</th>
+            <th>Status</th>
+            <th>Status Pembayaran</th>
+            <th>Batas Waktu</th>
+            <!-- <th>ID Pegawai</th> -->
             <th>Aksi</th>
             
           </tr>
@@ -60,21 +65,24 @@ include 'ref.php';
           
             <?php
 include "koneksi.php";
-$qry=mysqli_query($conn,"select * from outlet");
+if (isset($_GET["id_transaksi"])) {
+  $id_transaksi = $_GET["id_transaksi"];
+  $sql = "select * from transaksi where id='$id_transaksi'";
+  $data = mysqli_query($connect, $sql);
+  $transaksi = mysqli_fetch_array($data);
+  ?>
+
+<?php
 $no=0;
 while($data=mysqli_fetch_array($qry)){
 $no++;
+}
 
 ?>
+
             <!-- //TABEL -->
             <tr>
-          <!-- //BADGE  -->
-            <!-- <td class="image-cell">
-              <div class="image">
-                <img src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg" class="rounded-full">
-              </div>
-            </td> -->
-            <td><?=$no?></td>
+         ></td>
             <td><?=$data['nama']?></td>  
             <td><?=$data['alamat']?></td>
             <td><?=$data['tlp']?></td>
@@ -83,6 +91,9 @@ $no++;
             <!-- //AKSI -->
             <td class="actions-cell">
               <div class="buttons left nowrap">
+              <a href="detail_transaksi.php?id=<?=$data['id']?>" class="button medium green --jb-modal" type="button">
+                  <span class="icon"><i class="mdi mdi-eye"></i></span>
+                </a>
                 <a href="edit_outlet.php?id=<?=$data['id']?>" class="button medium blue --jb-modal" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </a>
@@ -94,12 +105,6 @@ $no++;
             </td>
             </tr>
 <?php  } ?>            
-
-            
-          
-          
-           
-           
           </tbody>
         </table>
         </div>
