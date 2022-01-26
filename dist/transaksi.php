@@ -55,7 +55,6 @@ include 'ref.php';
             <th>Batas Waktu</th>
             <!-- <th>ID Pegawai</th> -->
             <th>Aksi</th>
-            
           </tr>
           </thead>
 
@@ -65,27 +64,22 @@ include 'ref.php';
           
             <?php
 include "koneksi.php";
-if (isset($_GET["id_transaksi"])) {
-  $id_transaksi = $_GET["id_transaksi"];
-  $sql = "select * from transaksi where id='$id_transaksi'";
-  $data = mysqli_query($connect, $sql);
-  $transaksi = mysqli_fetch_array($data);
-  ?>
-
-<?php
+$qry_user=mysqli_query($conn,"select * from user");
 $no=0;
-while($data=mysqli_fetch_array($qry)){
+while($data_user=mysqli_fetch_array($qry_user)){
 $no++;
-}
 
 ?>
 
             <!-- //TABEL -->
-            <tr>
-         ></td>
-            <td><?=$data['nama']?></td>  
-            <td><?=$data['alamat']?></td>
-            <td><?=$data['tlp']?></td>
+            
+             <td><?=$no?></td>
+            <td><?=$data_user['nama']?></td>  
+            <td><?=$data_user['username']?></td>
+            <td><?=$data_user['password']?></td>
+            <td><?=$data_user['tlp']?></td>
+            <td><?=$data_user['id_role']?></td>
+            <td ><?=$data_user['id_outlet']?></td>
           
 
             <!-- //AKSI -->

@@ -155,6 +155,16 @@ include 'ref.php';
             </div>
           </div>
 
+          <!-- Tanggal bayar -->
+          <div class="field">
+            <label class="label">Tanggal Bayar</label>
+            <div class="control">
+              <div class="select">
+              <input class="input" type="date" placeholder="Jumlah"  name="tgl_bayar">
+              </div>
+            </div>
+          </div>
+
            <!-- Batas waktu -->
            <div class="field">
             <label class="label">Batas Tanggal Bayar</label>
@@ -199,7 +209,7 @@ include 'ref.php';
 
           <div class="field grouped">
             <div class="control">
-              <button type="submit" class="button green">
+              <button type="submit" class="button green" name="sumbit">
                 Tambah
               </button>
             </div>
