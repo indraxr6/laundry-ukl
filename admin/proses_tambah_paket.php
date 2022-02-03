@@ -8,18 +8,18 @@ if($_POST){
    
 
     if(empty($nama)){
-        echo "<script>alert('nama outlet tidak boleh kosong');location.href='tambah_outlet.php';</script>";
+        echo "<script>alert('nama outlet tidak boleh kosong');location.href='add_outlet.php';</script>";
  
     } elseif(empty($harga)){
-        echo "<script>alert('password tidak boleh kosong');location.href='tambah_outlet.php';</script>";
+        echo "<script>alert('password tidak boleh kosong');location.href='add_outlet.php';</script>";
         
     } else {
         include "koneksi.php";
         $insert=mysqli_query($conn,"insert into paket (nama, jenis, harga, id_outlet) value ('".$nama."','".$jenis."','".$harga."','".$outlet."')") or die(mysqli_error($conn));
         if($insert){
-            echo "<script>alert('Sukses menambahkan paket');location.href='tampil_paket.php';</script>";
+            echo "<script>alert('Sukses menambahkan paket');location.href='paket.php';</script>";
         } else {
-            echo "<script>alert('Gagal menambahkan paket');location.href='tampil_paket.php';</script>";
+            echo "<script>alert('Gagal menambahkan paket');location.href='paket.php';</script>";
         }
     }  
 }

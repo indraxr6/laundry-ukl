@@ -26,7 +26,8 @@ $no=0;
 while($data =mysqli_fetch_array($qry)){
     $no++;?>
     <tr>
-    <td><?=$no?></td><td><?=$data['nama']?></td>
+    <td><?=$no?></td>
+    <td><?=$data['nama']?></td>
     <td><?=$data['alamat']?></td>
     <td><?=$data['jenis_kelamin']?></td>
     <td><?=$data['tlp']?></td> 

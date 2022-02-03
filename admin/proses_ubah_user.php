@@ -21,7 +21,7 @@ $result =mysqli_query($conn,$sql);
 
 if($result){
 
-    echo "<script>alert('Berhasil update data');location.href='tampil_user.php';</script>";
+    echo "<script>alert('Berhasil update data');location.href='users.php';</script>";
    
 
 }else{

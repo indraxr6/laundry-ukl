@@ -17,7 +17,7 @@ $result =mysqli_query($conn,$sql);
 
 if($result){
 
-          echo "<script>alert('Berhasil update data');location.href='tampil_paket.php';</script>";
+          echo "<script>alert('Berhasil update data');location.href='paket.php';</script>";
 
 }else{
     printf('Failed update data'.mysqli_error($conn));

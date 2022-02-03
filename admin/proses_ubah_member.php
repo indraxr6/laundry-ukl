@@ -17,7 +17,7 @@ $result =mysqli_query($conn,$sql);
 
 if($result){
 
-          echo "<script>alert('Berhasil update data');location.href='tampil_member.php';</script>";
+          echo "<script>alert('Berhasil update data');location.href='pelanggan.php';</script>";
 
 //           echo "<script>alert('Sukses ubah data')</script>";
 //     header('Location: tampil_outlet.php');
