@@ -1,5 +1,5 @@
 <!-- Tailwind is included -->
-<link rel="stylesheet" href="dist/css/main.css?v=1628755089081">
+<link rel="stylesheet" href="admin/css/main.css?v=1628755089081">
 
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 <link rel="icon" type="dist/image/png" sizes="32x32" href="favicon-32x32.png"/>

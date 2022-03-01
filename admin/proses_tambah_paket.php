@@ -3,7 +3,7 @@ if($_POST){
     $nama=$_POST['nama'];
     $jenis=$_POST['jenis'];
     $harga=$_POST['harga'];
-    $outlet=$_POST['id_outlet'];
+  
 
    
 
@@ -15,7 +15,7 @@ if($_POST){
         
     } else {
         include "koneksi.php";
-        $insert=mysqli_query($conn,"insert into paket (nama, jenis, harga, id_outlet) value ('".$nama."','".$jenis."','".$harga."','".$outlet."')") or die(mysqli_error($conn));
+        $insert=mysqli_query($conn,"insert into paket (nama, jenis, harga) value ('".$nama."','".$jenis."','".$harga."')") or die(mysqli_error($conn));
         if($insert){
             echo "<script>alert('Sukses menambahkan paket');location.href='paket.php';</script>";
         } else {

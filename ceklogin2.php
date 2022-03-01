@@ -27,6 +27,14 @@ if($cek > 0){
         $_SESSION['status_login']=true; 
         header("location: kasir/index.php");
 
+    }else if($data['id_role'] == '4'){
+        $_SESSION['id_role'] = '4';
+        $_SESSION['username'] = $data['username'];
+        $_SESSION['password'] = $data['password'];
+        $_SESSION['nama']=$dt_data['nama'];
+        $_SESSION['status_login']=true; 
+        header("location: owner/index.php");
+
 }else{
     $msg = 'Username Atau Password Salah';
     header('location:index.php?msg='.$msg);

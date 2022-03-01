@@ -1,8 +1,11 @@
 <?php
 session_start();
     if($_SESSION['status_login']!=true){
-        header('location: login.php');
+        header('location: ./login.php');
     }
+    if($_SESSION['id_role']!="1"){
+      header('location: ./login.php');
+  }
   ?>
     
 <meta charset="utf-8">

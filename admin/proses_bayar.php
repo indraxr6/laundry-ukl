@@ -2,7 +2,7 @@
 include 'koneksi.php';
 
 $id = $_GET['id'];
-$date = date('d-m-y');
+$date = date('Y-m-d');
 
 $sql = "
 UPDATE transaksi

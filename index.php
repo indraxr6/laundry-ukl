@@ -1,4 +1,5 @@
 <?php include 'logref.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" class="form-screen">
 <head>
@@ -79,7 +80,7 @@
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="text/javascript" src="js/main.min.js?v=1628755089081"></script>
+<script type="text/javascript" src="admin/js/main.min.js?v=1628755089081"></script>
 
 
 <script>

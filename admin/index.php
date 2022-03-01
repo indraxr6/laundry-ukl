@@ -125,7 +125,7 @@ $jumlah_pelanggan = getrow($conn,'SELECT COUNT(id) as jumlahmember FROM member')
             <?php
 include "koneksi.php";
 // $qry_user=mysqli_query($conn,"select * from transaksi");
-$qry_user=mysqli_query($conn,"select transaksi.*, detil_transaksi.qty, member.nama from transaksi inner join member on member.id = transaksi.id_member inner join detil_transaksi where dibayar = 'dibayar'");
+$qry_user=mysqli_query($conn,"select transaksi.*, detil_transaksi.qty, member.nama from transaksi inner join member on member.id = transaksi.id_member inner join detil_transaksi on detil_transaksi.id_transaksi = transaksi.id where dibayar = 'dibayar'");
 
 $no=0;
 while($data_user=mysqli_fetch_array($qry_user)){

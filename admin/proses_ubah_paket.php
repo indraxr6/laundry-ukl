@@ -9,7 +9,7 @@ $outlet = $_POST['id_outlet'];
 
 $sql = "
     UPDATE paket
-    set nama = '".$nama."', jenis= '". $jenis . "', harga= '". $harga . "', id_outlet= '". $outlet . "' where id = '".$id."'
+    set nama = '".$nama."', jenis= '". $jenis . "', harga= '". $harga . "' where id = '".$id."'
     ;
 ";
 

@@ -49,7 +49,7 @@ include 'ref.php';
             <th>Nama</th>
             <th>Jenis</th>
             <th>Harga</th>
-            <th>Outlet</th>
+         
             <th>Aksi</th>
             
           </tr>
@@ -79,7 +79,7 @@ $no++;
             <td><?=$data['nama']?></td>  
             <td><?=$data['jenis']?></td>
             <td><?=$data['harga']?></td>
-            <td><?=$data['id_outlet']?></td>
+            
           
 
             <!-- //AKSI -->
